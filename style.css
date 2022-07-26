@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: salmon;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin: 50px 0;
+  letter-spacing: 0.1rem;
+}
+
+#alert {
+  width: 60%;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  color: red;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  display: none;
+}
+
+.container {
+  padding: 1rem;
+  background-color: rgb(225, 223, 223);
+  /* border: 1px solid gray; */
+  max-width: 50%;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: ease-in-out 0.5s;
+}
+
+button:hover {
+  background-color: darkgreen;
+  transform: scale(1.1);
+}
+
+#new-todo-input {
+  width: 60%;
+  padding: 0.6rem;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  margin-right: 8px;
+}
+.todo-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+#todo-list {
+  list-style-type: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.single-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 60%;
+  margin: 4px auto;
+  border-bottom: 1px solid;
+  padding: 5px 0px;
+}
+.single-todo-text {
+  flex: 1;
+  border: none;
+  background-color: rgb(225, 223, 223);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+.single-todo-text:focus {
+  outline: none;
+  border-radius: 4px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: crimson;
+}
+
+.delete,
+.edit,
+.bi-arrow-clockwise {
+  background-color: rgb(225, 223, 223);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.2rem;
+}
+
+.edit:hover {
+  background-color: rgb(225, 223, 223);
+}
+.delete:hover {
+  background-color: rgb(225, 223, 223);
+}
+
+.delete {
+  color: crimson;
+}
+.edit {
+  color: green;
+}
+
+.clear {
+  margin: 2rem;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 556px) {
+  .container {
+    max-width: 90%;
+  }
+
+  #new-todo-input {
+    width: 90%;
+  }
+
+  #add-new-todo-btn {
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .todo-list-header {
+    width: 90%;
+  }
+
+  .single-todo {
+    width: 90%;
+  }
+}
